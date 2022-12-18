@@ -1,7 +1,29 @@
 function pageLoaded () {
     var canvas = document.getElementById('myCanvas');
     var context = canvas.getContext('2d');
-    context.fillRect(175,100,100,100);  
+    
+    let triangleBase = 100;
+    let position = 120;
+
+    for (x = 0; x < 30; x++) {
+
+        for (y = 0; y < 1; y++) {
+
+            context.moveTo(position, position);
+            context.lineTo(position + triangleBase, position);
+            context.lineTo(position + triangleBase / 2, position - triangleBase);
+            context.lineTo(position, position);
+
+            position += 5;
+
+            context.strokeStyle = 'silver';
+            context.stroke();
+
+        }
+    }
+
+    
+
 
 }
 
