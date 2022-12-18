@@ -7,9 +7,8 @@ function pageLoaded () {
 
     for (x = 0; x < 30; x++) {
 
-        for (y = 0; y < 1; y++) {
-
             context.moveTo(position, position);
+
             context.lineTo(position + triangleBase, position);
             context.lineTo(position + triangleBase / 2, position - triangleBase);
             context.lineTo(position, position);
@@ -18,8 +17,7 @@ function pageLoaded () {
 
             context.strokeStyle = 'silver';
             context.stroke();
-
-        }
+                   
     }
 
     
